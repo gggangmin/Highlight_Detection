@@ -1,0 +1,21 @@
+{
+    project: "chat",
+    log_id: "chat",
+    dataset: {
+      chat_path: '/home/gmpark/multimodal/HighlightDetection_2020/CIKM/chat/chat_raw.pkl',
+      label_path: '/home/gmpark/multimodal/HighlightDetection_2020/CIKM/chat/label.pickle',
+      weight_path: '/home/gmpark/multimodal/HighlightDetection_2020/CIKM/chat/test/chat_dimension_128_hl_1/'
+    },
+    trn_args: {
+      device_id: 'cuda:1',
+      window_size: 7 ,
+      sampling: 40000,
+      hidden_size: 128,
+      num_layer: 3,
+      trn_bs: 128,
+      val_bs: 128, 
+      epoch: 100,
+      lr: 0.01,
+      hl_range: 1
+    },
+}

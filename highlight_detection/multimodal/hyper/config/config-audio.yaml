@@ -1,0 +1,26 @@
+{
+    project: "multimodal",
+    log_id: "multimodal",
+    dataset: {
+      chat_path: "/home/proj01/capstone/ASC/chat/data/chat_feature.pickle",
+      chat_size: 128,
+      audio_path: "/home/proj01/capstone/ASC/audio/data/audio_raw_feature_13.pickle",
+      audio_size: 13,
+      video_path: "/home/proj01/capstone/ASC/video/data/video_raw_feature_sum_moving_average.pickle",
+      video_size: 1,
+      label_path: "/home/proj01/capstone/ASC/label.pickle",
+      weight_path: "/home/proj01/capstone/CIKM/multimodal/hyper/data/window/audio9"
+    },
+    trn_args: {
+      device_id: 'cuda:1',
+      window_size: 9 ,
+      sampling: 44000,
+      hidden_size: 128,
+      num_layer: 3,
+      trn_bs: 128,
+      val_bs: 128, 
+      epoch: 100,
+      lr: 0.01,
+      hl_range: 0.25
+    },
+}
